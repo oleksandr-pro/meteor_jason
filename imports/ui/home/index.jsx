@@ -1,5 +1,6 @@
 import React from 'react'
 import {FlowRouter} from 'meteor/kadira:flow-router'
+import {Player} from "../components";
 
 /**
  * Simplest example of a React compenent.
@@ -20,10 +21,11 @@ export default class Home extends React.Component {
                 <h4>
                     Forms with simple schema
                 </h4>
+                <Player url={'http://www.evidenceaudio.com/wp-content/uploads/2014/10/lyricslap.mp3'}/>
                 <ul>
                     <li>
                         <a href={FlowRouter.path('list')}>
-                            Using React for simple CRUD like components
+                            Edit Songs Configuration
                         </a>
                     </li>
                 </ul>

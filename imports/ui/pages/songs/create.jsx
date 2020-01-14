@@ -6,6 +6,7 @@ import { Meteor } from 'meteor/meteor'
 import React from 'react'
 import {FlowRouter} from 'meteor/kadira:flow-router'
 import {Paper, Button, Snackbar} from "@material-ui/core";
+import FileUploadComponent from "../../components/FileUpload";
 
 export default class Create extends React.Component {
 
@@ -47,9 +48,10 @@ export default class Create extends React.Component {
                 <h1>Add Song</h1>
                 <form>
                     <p><b>Title:</b> <input type='text' ref='title' /></p>
-                    <p><b>Play Time:</b> <input type='date' ref='play_time' /></p>
+                    <p><b>Play Time:</b> <input type='time' ref='play_time' /></p>
                     <p><b>File:</b> <input type={'text'} ref={'address'}></input></p>
                 </form>
+                <FileUploadComponent />
                 <Button
                     color={'primary'}
                     variant={'contained'}
@@ -61,7 +63,7 @@ export default class Create extends React.Component {
                     color={'secondary'}
                     variant={'contained'}
                     onClick={() => FlowRouter.go('list')}>
-                    Cancel
+                    List
                 </Button>
 
                 <Snackbar
